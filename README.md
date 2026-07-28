@@ -24,8 +24,8 @@ para documentação oficial.
 Clone o repositório e entre na pasta:
 
 ```bash
-git clone URL_DO_SEU_REPOSITORIO
-cd NOME_DO_REPOSITORIO
+git clone https://github.com/oliveirasdiogo/assistente-python.git
+cd assistente-python
 ```
 
 Crie o ambiente isolado `assistente-python` a partir do arquivo do projeto:
@@ -68,9 +68,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Configuração
+## Configuração da Groq
 
-Defina a chave como variável de ambiente:
+A [Groq](https://groq.com/) fornece a API que executa o modelo de inteligência
+artificial usado pelo chat. Para configurar:
+
+1. Crie uma conta no [GroqCloud Console](https://console.groq.com/);
+2. Abra a página [API Keys](https://console.groq.com/keys);
+3. Crie uma chave e copie o valor exibido;
+4. Defina a chave como variável de ambiente antes de iniciar a aplicação.
+
+No Linux ou macOS:
 
 ```bash
 export GROQ_API_KEY="sua-chave"
@@ -83,16 +91,48 @@ $env:GROQ_API_KEY="sua-chave"
 ```
 
 Também é possível inserir a chave no campo protegido da barra lateral. Nunca
-adicione uma chave real ao Git ou ao código-fonte.
+adicione uma chave real ao Git, ao código-fonte, ao `.env.example` ou a capturas
+de tela. A API pode ter limites de uso e custos definidos pela sua conta Groq.
 
-## Execução
+Consulte a [documentação da API Groq](https://console.groq.com/docs/overview)
+para detalhes sobre modelos, limites e erros.
+
+## Execução com Streamlit
+
+O [Streamlit](https://streamlit.io/) transforma o script Python em uma aplicação
+web local. Com o ambiente Conda ativado e a chave configurada, execute:
 
 ```bash
 streamlit run assistente_python.py
 ```
 
 O Streamlit mostrará no terminal o endereço local da aplicação, normalmente
-`http://localhost:8501`.
+`http://localhost:8501`. Abra esse endereço no navegador. Para encerrar o
+servidor, volte ao terminal e pressione `Ctrl+C`.
+
+Algumas opções úteis:
+
+```bash
+# Usar outra porta
+streamlit run assistente_python.py --server.port 8502
+
+# Confirmar a instalação e a versão
+streamlit version
+```
+
+Consulte a [documentação do Streamlit](https://docs.streamlit.io/) para opções
+de configuração, componentes e publicação.
+
+## Solução de problemas
+
+- **`streamlit: command not found`**: ative o ambiente com
+  `conda activate assistente-python` e instale as dependências novamente;
+- **Chave inválida ou não informada**: confirme `GROQ_API_KEY` ou use o campo
+  protegido da barra lateral;
+- **Porta 8501 ocupada**: execute com `--server.port 8502`;
+- **Modelo indisponível**: consulte os
+  [modelos ativos da Groq](https://console.groq.com/docs/models) e atualize
+  `MODEL_NAME`.
 
 ## Exemplos de perguntas
 
