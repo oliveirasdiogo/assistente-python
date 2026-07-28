@@ -1,8 +1,29 @@
 # Assistente de Programação Python
 
+[![Qualidade](https://github.com/oliveirasdiogo/assistente-python/actions/workflows/quality.yml/badge.svg)](https://github.com/oliveirasdiogo/assistente-python/actions/workflows/quality.yml)
+[![Python 3.14](https://img.shields.io/badge/Python-3.14-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit 1.59.2](https://img.shields.io/badge/Streamlit-1.59.2-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Groq 1.5.0](https://img.shields.io/badge/Groq-1.5.0-F55036)](https://groq.com/)
+[![Licença MIT](https://img.shields.io/badge/Licen%C3%A7a-MIT-2EA44F)](LICENSE)
+
 Aplicação web feita com Streamlit e a API da Groq para ajudar pessoas iniciantes
 a estudar Python. O assistente fornece explicações, exemplos de código e links
 para documentação oficial.
+
+## Índice
+
+- [Funcionalidades](#funcionalidades)
+- [Requisitos](#requisitos)
+- [Instalação com Conda](#instalação-com-conda)
+- [Configuração da Groq](#configuração-da-groq)
+- [Execução com Streamlit](#execução-com-streamlit)
+- [Solução de problemas](#solução-de-problemas)
+- [Exemplos de perguntas](#exemplos-de-perguntas)
+- [Estrutura do projeto](#estrutura-do-projeto)
+- [Modelo de IA](#modelo-de-ia)
+- [Limitações](#limitações)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
 ## Funcionalidades
 
