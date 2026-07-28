@@ -44,7 +44,7 @@ conda env update --name assistente-python --file environment.yml --prune
 Como alternativa, o ambiente pode ser criado manualmente:
 
 ```bash
-conda create --name assistente-python python=3.13 pip
+conda create --name assistente-python python=3.14 pip
 conda activate assistente-python
 pip install -r requirements.txt
 ```
